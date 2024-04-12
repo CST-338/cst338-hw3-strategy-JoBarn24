@@ -1,6 +1,13 @@
 import java.util.HashMap;
 import java.util.Objects;
 
+/**
+ * Author: Jody Barnett
+ * Date: 4/12/24
+ * Description: The Monster class is the parent class that all monsters will be based off of.
+ * It includes hp, xp, and current items being held by the monster.
+ */
+
 public class Monster {
     private Integer hp = 1;
     private Integer xp = 10;
