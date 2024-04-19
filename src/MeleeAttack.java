@@ -11,6 +11,12 @@
         this.attacker = attacker;
     }
 
+
+    /**
+     * Uses a melee attack against a monster.
+     * @param target is the monster being attacked.
+     * @return null
+     */
     @Override
     public Integer attack(Monster target) {
         String message = attacker + " uses a melee attack on " + target;

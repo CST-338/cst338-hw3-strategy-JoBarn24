@@ -11,6 +11,12 @@ public class RangedAttack implements Attack {
         this.attacker = attacker;
     }
 
+
+    /**
+     * Uses a ranged attack against a monster.
+     * @param target is the monster being attacked.
+     * @return null
+     */
     @Override
     public Integer attack(Monster target) {
         String message = attacker + " uses a ranged attack on " + target;
