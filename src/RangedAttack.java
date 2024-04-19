@@ -1,3 +1,9 @@
+/**
+ * Author: Jody Barnett
+ * Date: 4/18/24
+ * Description: Ranged attack that does damage to monsters.
+ */
+
 public class RangedAttack implements Attack {
     Monster attacker;
 

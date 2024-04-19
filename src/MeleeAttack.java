@@ -1,4 +1,10 @@
-public class MeleeAttack implements Attack {
+/**
+ * Author: Jody Barnett
+ * Date: 4/18/24
+ * Description: Melee attack that does damage to monsters.
+ */
+
+ class MeleeAttack implements Attack {
     Monster attacker;
 
     public MeleeAttack(Monster attacker) {
