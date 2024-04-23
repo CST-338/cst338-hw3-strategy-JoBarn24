@@ -1,10 +1,14 @@
+package Monsters;
+
+import Abilities.Attack;
+
 import java.util.HashMap;
 import java.util.Objects;
 
 /**
  * Author: Jody Barnett
  * Date: 4/12/24
- * Description: The Monster class is the parent class that all monsters will be based off of.
+ * Description: The Monsters.Monster class is the parent class that all monsters will be based off of.
  * It includes hp, xp, and current items being held by the monster.
  */
 
@@ -13,6 +17,11 @@ public class Monster {
     private Integer xp = 10;
     private Integer maxHP = 100;
     private HashMap<String, Integer> items = new HashMap<>();
+
+    Integer agi;
+    Integer def;
+    Integer str;
+    Attack attack;
 
     public Monster() {
     }

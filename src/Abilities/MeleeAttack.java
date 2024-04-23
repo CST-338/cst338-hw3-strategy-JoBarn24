@@ -1,3 +1,7 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
  * Author: Jody Barnett
  * Date: 4/18/24
