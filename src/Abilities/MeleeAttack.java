@@ -8,7 +8,7 @@ import Monsters.Monster;
  * Description: Melee attack that does damage to monsters.
  */
 
- class MeleeAttack implements Attack {
+public class MeleeAttack implements Attack {
     Monster attacker;
 
     public MeleeAttack(Monster attacker) {
