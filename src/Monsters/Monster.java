@@ -4,6 +4,7 @@ import Abilities.Attack;
 
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * Author: Jody Barnett
@@ -18,9 +19,9 @@ public class Monster {
     private Integer maxHP = 100;
     private HashMap<String, Integer> items = new HashMap<>();
 
-    Integer agi;
-    Integer def;
-    Integer str;
+    Integer agi = 10;
+    Integer def = 10;
+    Integer str = 10;
     Attack attack;
 
     public Monster() {
@@ -31,6 +32,25 @@ public class Monster {
         hp = this.maxHP;
         this.xp = xp;
         this.items = items;
+    }
+
+    public Integer attackTarget(Monster monster) {
+        Integer tempAttack = attack.attack(monster);
+        takeDamage(tempAttack);
+        return tempAttack;
+    }
+
+    public boolean takeDamage(Integer damage) {
+        if (damage > 0) {
+            setHp(getHp() - damage);
+            System.out.println("The creature was hit for " + damage + " damage");
+        }
+        if (getHp() <= 0) {
+            System.out.println("Oh no! The creature has perished");
+            System.out.println(this.toString());
+            return false;
+        }
+        return false;
     }
 
     public Integer getHp() {
@@ -55,6 +75,28 @@ public class Monster {
 
     public Integer getMaxHP() {
         return maxHP;
+    }
+
+    public Integer getAgility() {
+        return agi;
+    }
+
+    public Integer getDefense() {
+        return def;
+    }
+
+    public Integer getStrength() {
+        return str;
+    }
+
+    public Integer getAttribute(Integer min, Integer max) {
+        Random rand = new Random();
+        if (min > max) {
+            Integer temp = min;
+            min = max;
+            max = temp;
+        }
+        return rand.nextInt(max-min) + min;
     }
 
     @Override
