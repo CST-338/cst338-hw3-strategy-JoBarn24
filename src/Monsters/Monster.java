@@ -104,12 +104,12 @@ public class Monster {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Monster monster = (Monster) o;
-        return Objects.equals(getHp(), monster.getHp()) && Objects.equals(getXp(), monster.getXp()) && Objects.equals(getMaxHP(), monster.getMaxHP()) && Objects.equals(getItems(), monster.getItems());
+        return Objects.equals(getHp(), monster.getHp()) && Objects.equals(getXp(), monster.getXp()) && Objects.equals(getMaxHP(), monster.getMaxHP()) && Objects.equals(getItems(), monster.getItems()) && Objects.equals(agi, monster.agi) && Objects.equals(def, monster.def) && Objects.equals(str, monster.str) && Objects.equals(attack, monster.attack);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getHp(), getXp(), getMaxHP(), getItems());
+        return Objects.hash(getHp(), getXp(), getMaxHP(), getItems(), agi, def, str, attack);
     }
 
     @Override
